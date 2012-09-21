@@ -40,6 +40,9 @@ Once the plugin has been activated you will notice a new menu on the side called
 
 == Changelog ==
 
+= 1.1 =
+* Fixed an issue in the timer widget
+
 = 1.0 =
 * Release
 
