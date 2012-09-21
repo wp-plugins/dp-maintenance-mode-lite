@@ -35,11 +35,11 @@
 			var currentTime = new Date(), differenceTime;
 			
 			differenceTime = new Date(gVars.launchDate.getTime() - currentTime.getTime());
-			
-			var d = Math.abs((gVars.launchDate.getTime() - currentTime.getTime()) / (24*60*60*1000)).toFixed(0);
-			var h = differenceTime.getHours();
-			var m = differenceTime.getMinutes();
-			var s = differenceTime.getSeconds();
+
+			var d = Math.floor(Math.abs((gVars.launchDate.getTime() - currentTime.getTime()) / (24*60*60*1000)));
+			var h = differenceTime.getUTCHours();
+			var m = differenceTime.getUTCMinutes();
+			var s = differenceTime.getUTCSeconds();
 			
 			$('.container_clock .days span').html(d);
 			$('.container_clock .hours span').html(h);
