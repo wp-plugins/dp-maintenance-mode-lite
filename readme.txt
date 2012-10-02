@@ -1,7 +1,7 @@
 === DP Maintenance Mode Lite ===
 Contributors: dpereyra
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info@dpereyra.com&item_name=DP%20Maintenance%20Mode%20Lite&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: maintenance, under construction
+Tags: maintenance, under construction, responsive
 Requires at least: 3.0
 Tested up to: 3.4.2
 Stable tag: 1.2
