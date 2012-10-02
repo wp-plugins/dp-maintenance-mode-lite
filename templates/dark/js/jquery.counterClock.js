@@ -18,7 +18,7 @@
 			opts[k] = opts[k] || defaults[k];
 		})
 		
-		launchDateFix = new Date(opts.launchDate.year, (opts.launchDate.month - 1), opts.launchDate.day, opts.launchDate.hour, opts.launchDate.minute);
+		launchDateFix = Date.UTC(opts.launchDate.year, (opts.launchDate.month - 1), opts.launchDate.day, opts.launchDate.hour, opts.launchDate.minute);
 		
 		gVars["launchDate"] = launchDateFix;
 
@@ -34,12 +34,23 @@
 		
 			var currentTime = new Date(), differenceTime;
 			
-			differenceTime = new Date(gVars.launchDate.getTime() - currentTime.getTime());
-
-			var d = Math.floor(Math.abs((gVars.launchDate.getTime() - currentTime.getTime()) / (24*60*60*1000)));
-			var h = differenceTime.getUTCHours();
-			var m = differenceTime.getUTCMinutes();
-			var s = differenceTime.getUTCSeconds();
+			differenceTime = new Date(gVars.launchDate - currentTime.getTime());
+			
+			if(gVars.launchDate <= currentTime.getTime()) {
+				
+				var d = 0;
+				var h = 0;
+				var m = 0;
+				var s = 0;
+				
+			} else {
+			
+				var d = Math.floor(Math.abs((gVars.launchDate - currentTime.getTime()) / (24*60*60*1000)));
+				var h = differenceTime.getUTCHours();
+				var m = differenceTime.getUTCMinutes();
+				var s = differenceTime.getUTCSeconds();
+			
+			}
 			
 			$('.container_clock .days span').html(d);
 			$('.container_clock .hours span').html(h);
