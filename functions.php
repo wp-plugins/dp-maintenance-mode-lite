@@ -106,6 +106,8 @@ function dpMaintenance_deactivate_timer(){
 		
 		//get current time from WP
 		$blogtime = current_time('mysql'); 
+		//$blogtime = gmdate('Y-m-d h:i:s'); 
+		
 		list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = split( '([^0-9])', $blogtime );
 		
 		$todayDay=$today_year."-".$today_month."-".$today_day." ".$hour.":".$minute.":".$second;
