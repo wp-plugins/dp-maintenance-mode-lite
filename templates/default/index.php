@@ -82,7 +82,7 @@
 		/* Twitter API */
 		try{
 		var msgs = '';
-		$.getJSON('http://api.twitter.com/1/statuses/user_timeline/<?php echo $dpMaintenance['twitter_id']?>.json?count=<?php echo $dpMaintenance['twitter_count']?>&include_rts=true&include_entities=true&callback=?', function(data){
+		$.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=<?php echo $dpMaintenance['twitter_id']?>&count=<?php echo $dpMaintenance['twitter_count']?>&include_rts=true&include_entities=true&callback=?', function(data){
 			$.each(data, function(index, item){
 					msgs += '<div>' + item.text.linkify() + ' ' + '<br /><span class="date">' + relative_time(item.created_at) + '</span>' + '</div>';
 			});
@@ -179,19 +179,19 @@
                 <ul id="counter">
                     <li class="days">
                     	<span></span>
-                        <h3><?php _e("Days")?></h3>
+                        <h3><?php echo $dpMaintenance['timer_widget_days'] != "" ? $dpMaintenance['timer_widget_days'] : "Days" ?></h3>
                     </li>
                     <li class="hours">
                     	<span></span>
-                        <h3><?php _e("Hours")?></h3>
+                        <h3><?php echo $dpMaintenance['timer_widget_hours'] != "" ? $dpMaintenance['timer_widget_hours'] : "Hours"?></h3>
                     </li>
                     <li class="minutes">
                     	<span></span>
-                        <h3><?php _e("Minutes")?></h3>
+                        <h3><?php echo $dpMaintenance['timer_widget_minutes'] != "" ? $dpMaintenance['timer_widget_minutes'] : "Minutes"?></h3>
                     </li>
                     <li class="seconds">
                     	<span></span>
-                        <h3><?php _e("Seconds")?></h3>
+                        <h3><?php echo $dpMaintenance['timer_widget_seconds'] != "" ? $dpMaintenance['timer_widget_seconds'] : "Seconds"?></h3>
                     </li>
                 </ul>
                 <div class="clear"></div><!-- CLEAR -->	
@@ -210,7 +210,7 @@
         <span class="up"></span>
         <div class="container_12">
         	<div class="grid_12">
-        		<h2><?php echo $dpMaintenance['percentage']?>% <?php _e("Completed!")?></h2>
+        		<h2><?php echo $dpMaintenance['percentage']?>% <?php echo $dpMaintenance['completed_translation'] != "" ? $dpMaintenance['completed_translation'] : "Completed"?></h2>
                 <div id="progressbar"></div>
             </div>
         </div>
