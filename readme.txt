@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info@
 Tags: maintenance, under construction, responsive
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ Once the plugin has been activated you will notice a new menu on the side called
 
 == Changelog ==
 
+= 1.2.1 =
+* Added translation values
+
 = 1.2 =
 * Fixed an issue with dates in the timer widget
 
@@ -50,6 +53,9 @@ Once the plugin has been activated you will notice a new menu on the side called
 * Release
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+* Added translation values
 
 = 1.2 =
 * Fixed an issue with dates in the timer widget
