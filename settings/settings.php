@@ -244,14 +244,70 @@ global $dpMaintenance, $wpdb;
                     </div>
                     <div class="clear"></div>
                     
+                    <div class="option option-select option_w">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('"Days" Translation:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input name='dpMaintenance_options[timer_widget_days]' value="<?php echo $dpMaintenance['timer_widget_days']?>"  />
+                                    <br>
+                                </div>
+                                <div class="desc"><?php _e('Introduce the "Days" word translation.','dpMaintenance'); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select option_w">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('"Hours" Translation:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input name='dpMaintenance_options[timer_widget_hours]' value="<?php echo $dpMaintenance['timer_widget_hours']?>"  />
+                                    <br>
+                                </div>
+                                <div class="desc"><?php _e('Introduce the "Hours" word translation.','dpMaintenance'); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select option_w">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('"Minutes" Translation:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input name='dpMaintenance_options[timer_widget_minutes]' value="<?php echo $dpMaintenance['timer_widget_minutes']?>"  />
+                                    <br>
+                                </div>
+                                <div class="desc"><?php _e('Introduce the "Minutes" word translation.','dpMaintenance'); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select option_w">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('"Seconds" Translation:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input name='dpMaintenance_options[timer_widget_seconds]' value="<?php echo $dpMaintenance['timer_widget_seconds']?>"  />
+                                    <br>
+                                </div>
+                                <div class="desc"><?php _e('Introduce the "Seconds" word translation.','dpMaintenance'); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
                     <div class="option option-select">
                         <div class="option-inner">
                             <label class="titledesc"><?php _e('Expiration Date:','dpMaintenance'); ?></label>
                             <div class="formcontainer">
                                 <div class="forminp">
                                     <input type="text" name="dpMaintenance_options[expiration_date]" readonly="readonly" style="width:100px;" id="dpMaintenance_expiration_date" class="large-text datepicker" value="<?php echo $dpMaintenance['expiration_date']?>" />
-                                    <input type="number" min="00" max="23" style="width:40px;" name="dpMaintenance_options[expiration_date_hh]" value="<?php echo $dpMaintenance['expiration_date_hh']?>" /> : 
-                                    <input type="number" min="00" max="59" style="width:40px;" name="dpMaintenance_options[expiration_date_mm]" value="<?php echo $dpMaintenance['expiration_date_mm']?>" />
+                                    <input type="number" min="00" max="23" style="width:40px;" name="dpMaintenance_options[expiration_date_hh]" value="<?php echo $dpMaintenance['expiration_date_hh'] != "" ? $dpMaintenance['expiration_date_hh'] : '00'?>" /> : 
+                                    <input type="number" min="00" max="59" style="width:40px;" name="dpMaintenance_options[expiration_date_mm]" value="<?php echo $dpMaintenance['expiration_date_mm'] != "" ? $dpMaintenance['expiration_date_mm'] : '00'?>" />
                                     <br>
                                 </div>
                                 <div class="clear"></div>
@@ -313,6 +369,20 @@ global $dpMaintenance, $wpdb;
                                     <br>
                                 </div>
                                 <div class="desc"><?php _e('Set the percentage completed of the maintenance.','dpMaintenance'); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select option_w no_border">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('"Completed" Translation:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input type="text" name="dpMaintenance_options[completed_translation]" value="<?php echo $dpMaintenance['completed_translation']?>" /> 
+                                    <br>
+                                </div>
+                                <div class="desc"><?php _e('Introduce the "Completed" word translation.','dpMaintenance'); ?></div>
                             </div>
                         </div>
                     </div>
