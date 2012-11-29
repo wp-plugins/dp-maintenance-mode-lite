@@ -330,6 +330,7 @@ global $dpMaintenance, $wpdb;
                         </div>
                     </div>
                     <div class="clear"></div>
+                    <div class="errorCustom"><p>Notice: If you select to deactive the plugin when time expires and the Expiration Date is a date in the past, the maintenance page will not be displayed.</p></div>
                 </div>
             </div>
             
