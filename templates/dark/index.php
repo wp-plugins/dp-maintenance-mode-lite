@@ -262,7 +262,7 @@
                         <h2><?php echo $dpMaintenance['newsletter_widget_title']?></h2>
                         
                         <div class="newsletterContent">
-                            <form>
+                            <form onsubmit="$('#btn_newsletter').trigger('click'); return false;">
                                 <input type="text" value="mail@mail.com" name="newsletter_email" id="newsletter_email" onfocus="if(this.value == 'mail@mail.com') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'mail@mail.com'; }" class="text newsletter_email" />
                                 
                                 <input type="button" class="button" id="btn_newsletter" value="<?php echo $dpMaintenance['button_subscribe']?>" />
@@ -277,7 +277,7 @@
                         <h2><?php echo $dpMaintenance['contact_form_title']?></h2>
                         
                         <div class="contactContent">
-                            <form>
+                            <form onsubmit="$('#btn_contact').trigger('click'); return false;">
                                 <input type="text" value="Your name" name="name" id="name" onfocus="if(this.value == '<?php _e("Your name")?>') { this.value = ''; }" onblur="if(this.value == '') { this.value = '<?php _e("Your name")?>'; }" class="text" />
                                 
                                 <input type="text" value="mail@mail.com" name="email" id="email" onfocus="if(this.value == 'mail@mail.com') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'mail@mail.com'; }" class="text" />
