@@ -840,6 +840,20 @@ global $dpMaintenance, $wpdb;
                     
                     <div class="option option-select option_w no_border">
                         <div class="option-inner">
+                            <label class="titledesc"><?php _e('Your Name:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input type='text' name='dpMaintenance_options[your_name]' value="<?php echo $dpMaintenance['your_name']?>"/>
+                                    <br>
+                                </div>
+                                <div class="desc"><?php _e('Introduce the name input desciption.','dpMaintenance'); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select option_w no_border">
+                        <div class="option-inner">
                             <label class="titledesc"><?php _e('Send Button:','dpMaintenance'); ?></label>
                             <div class="formcontainer">
                                 <div class="forminp">
