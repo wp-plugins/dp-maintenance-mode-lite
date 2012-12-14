@@ -276,7 +276,7 @@
                 
                 <div class="contactContent">
                 	<form onsubmit="$('#btn_contact').trigger('click'); return false;">
-                    	<input type="text" value="Your name" name="name" id="name" onfocus="if(this.value == '<?php _e("Your name")?>') { this.value = ''; }" onblur="if(this.value == '') { this.value = '<?php _e("Your name")?>'; }" class="text" />
+                    	<input type="text" value="<?php _e("Your name")?>" name="name" id="name" onfocus="if(this.value == '<?php _e("Your name")?>') { this.value = ''; }" onblur="if(this.value == '') { this.value = '<?php _e("Your name")?>'; }" class="text" />
                         
                         <input type="text" value="mail@mail.com" name="email" id="email" onfocus="if(this.value == 'mail@mail.com') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'mail@mail.com'; }" class="text" />
                         
