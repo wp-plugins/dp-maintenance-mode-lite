@@ -2,7 +2,7 @@
 /*
 Plugin Name: DP Maintenance Mode Lite
 Description: The DP Maintenance Lite plugin includes the possibility to add a maintenance mode with a sleek theme to your website.
-Version: 1.2.4	
+Version: 1.2.5	
 Author: Diego Pereyra
 Author URI: http://www.dpereyra.com/
 Wordpress version supported: 2.8 and above
@@ -13,7 +13,7 @@ Wordpress version supported: 2.8 and above
 global $dpMaintenance;
 $dpMaintenance = get_option('dpMaintenance_options');
 
-define("DPMAINTENANCE_VER","1.2.4",false);//Current Version of this plugin
+define("DPMAINTENANCE_VER","1.2.5",false);//Current Version of this plugin
 if ( ! defined( 'DPMAINTENANCE_PLUGIN_BASENAME' ) )
 	define( 'DPMAINTENANCE_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 if ( ! defined( 'MAINTENANCE_CSS_DIR' ) ){
