@@ -4,24 +4,28 @@
 	*/
 @session_start();
 
+//Include Configuration
+require_once (dirname (__FILE__) . '/../../../../../../wp-config.php');
 require_once (dirname (__FILE__) . '/../../../mailchimp/miniMCAPI.class.php');
+
+global $dpMaintenance;
 
 if(stripslashes($_POST['newsletter_email'])!=''){
 	$newsletter_email = stripslashes($_POST['newsletter_email']);
-	$to_email = stripslashes($_POST['to_email']);
+	$to_email = stripslashes($dpMaintenance['newsletter_email_address']);
 	
 	$subject ="Newsletter subscription";
 	
 	$message = "Newsletter Subscription: ".$newsletter_email;
 	
-	$headers = 'From: '.$newsletter_email . "\r\n".'Reply-to: '.$newsletter_email."\r\n".'X-Mailer: PHP/'. phpversion();
+	$headers = 'From: '.$to_email . "\r\n".'Reply-to: '.$newsletter_email."\r\n".'X-Mailer: PHP/'. phpversion();
 	
 	@mail($to_email,$subject,$message,$headers);
 	
-	if($_SESSION['mailchimp_api'] != "" && $_SESSION['mailchimp_active']) {
-		$mailchimp_class = new mailchimpSF_MCAPI($_SESSION['mailchimp_api']);
+	if($dpMaintenance['mailchimp_api'] != "" && $dpMaintenance['mailchimp_active']) {
+		$mailchimp_class = new mailchimpSF_MCAPI($dpMaintenance['mailchimp_api']);
 		
-		$retval = $mailchimp_class->listSubscribe( $_SESSION['mailchimp_list'], $newsletter_email );
+		$retval = $mailchimp_class->listSubscribe( $dpMaintenance['mailchimp_list'], $newsletter_email );
 
 		if(!$mailchimp_class->errorCode){	
 			die('ok');
