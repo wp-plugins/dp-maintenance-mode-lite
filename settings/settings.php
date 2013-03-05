@@ -600,6 +600,7 @@ global $dpMaintenance, $wpdb;
                         </div>
                     </div>
                     <div class="clear"></div>
+                    <div class="errorCustom"><p><?php _e('Notice: Due to recent changes in the twitter API, you need to add your consume key and secret key. Follow the instructions below.','dpMaintenance'); ?></p></div>
                     
                     <div class="option option-select option_w">
                         <div class="option-inner">
@@ -626,6 +627,81 @@ global $dpMaintenance, $wpdb;
                                 <div class="desc"><?php _e('Introduce your twitter username.','dpMaintenance'); ?></div>
                             </div>
                         </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('Consumer Key:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input type='text' name='dpMaintenance_options[twitter_consumer_key]' value="<?php echo $dpMaintenance['twitter_consumer_key']?>"/>
+                                    <br>
+                                </div>
+                                <div class="desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('Consumer Secret:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input type='text' name='dpMaintenance_options[twitter_consumer_secret]' value="<?php echo $dpMaintenance['twitter_consumer_secret']?>"/>
+                                    <br>
+                                </div>
+                                <div class="desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('Access Token:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input type='text' name='dpMaintenance_options[twitter_access_token]' value="<?php echo $dpMaintenance['twitter_access_token']?>"/>
+                                    <br>
+                                </div>
+                                <div class="desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select">
+                        <div class="option-inner">
+                            <label class="titledesc"><?php _e('Access Token Secret:','dpMaintenance'); ?></label>
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <input type='text' name='dpMaintenance_options[twitter_access_secret]' value="<?php echo $dpMaintenance['twitter_access_secret']?>"/>
+                                    <br>
+                                </div>
+                                <div class="desc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="option option-select">
+                        <div class="option-inner">
+                            <div class="formcontainer">
+                                <div class="forminp">
+                                    <strong>Directions to get the Consumer Key and Consumer Secret</strong>
+                                    <ol>
+                                        <li><a href="https://dev.twitter.com/apps/new">Add a new Twitter application</a></li>
+                                        <li>Fill in Name, Description, Website, and Callback URL (don't leave any blank) with anything you want</li>
+                                        <li>Agree to rules, fill out captcha, and submit your application</li>
+                                        <li>Click the button "Create my access token" and then go to the OAuth tab.</li>
+                                        <li>Copy the Consumer key, Consumer secret, Access token and Access token secret into the fields above</li>
+                                        <li>Click the Save Settings button at the bottom of this page</li>
+                                    </ol>
+                   				</div>
+                            </div>
+                    	</div>
                     </div>
                     <div class="clear"></div>
                     

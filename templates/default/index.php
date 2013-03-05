@@ -82,7 +82,7 @@
 		/* Twitter API */
 		try{
 		var msgs = '';
-		$.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=<?php echo $dpMaintenance['twitter_id']?>&count=<?php echo $dpMaintenance['twitter_count']?>&include_rts=true&include_entities=true&callback=?', function(data){
+		$.getJSON('<?php echo dpMaintenance_plugin_url()?>/lib/user_timeline.php?screen_name=<?php echo $dpMaintenance['twitter_id']?>&count=<?php echo $dpMaintenance['twitter_count']?>&include_rts=true&include_entities=true&t=<?php echo time()?>', function(data){
 			$.each(data, function(index, item){
 					msgs += '<div>' + item.text.linkify() + ' ' + '<br /><span class="date">' + relative_time(item.created_at) + '</span>' + '</div>';
 			});

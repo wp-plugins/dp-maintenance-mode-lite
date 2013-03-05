@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info@
 Tags: maintenance, under construction, responsive
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ Once the plugin has been activated you will notice a new menu on the side called
 
 == Changelog ==
 
+= 1.3.1 =
+* Added support to Twitter API 1.1
+
 = 1.3 =
 * Fixed an issue Sending emails in some servers
 
@@ -71,6 +74,9 @@ Once the plugin has been activated you will notice a new menu on the side called
 * Release
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+* Added support to Twitter API 1.1
 
 = 1.3 =
 * Fixed an issue Sending emails in some servers
